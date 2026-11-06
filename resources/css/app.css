@@ -1,0 +1,72 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+}
+.master-data-container {
+    padding: 24px;
+}
+
+.master-data-header {
+    margin-bottom: 24px;
+}
+
+.master-data-header h2 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.master-data-header p {
+    margin-top: 6px;
+    color: #667085;
+    font-size: 14px;
+}
+
+.master-data-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.master-data-card {
+    display: block;
+    padding: 22px;
+    background: #ffffff;
+    border: 1px solid #e4e7ec;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+.master-data-card:hover {
+    border-color: #b8c2cc;
+    transform: translateY(-2px);
+}
+
+.master-data-card-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1d2939;
+}
+
+.master-data-card-text {
+    margin-top: 7px;
+    font-size: 13px;
+    color: #667085;
+}
+
+@media (max-width: 700px) {
+    .master-data-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .master-data-container {
+        padding: 16px;
+    }
+}
+
